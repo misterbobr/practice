@@ -8,6 +8,8 @@ jobs:
             - checkout
             - run: sudo pip install jupyter_client
             - run: sudo pip install nbconvert
+            - run: sudo python3 -m pip install ipykernel
+            - run: sudo python3 -m ipykernel install --user
             - run: jupyter-nbconvert --execute ./Nearest_Neighbors_Classification.ipynb
             - store_artifacts:
                 path: ./Nearest_Neighbors_Classification.html
