@@ -1,10 +1,14 @@
 version: 2.1
+
 orbs:
   welcome: circleci/welcome-orb@0.4.1
-  
+
 jobs:
     build:
+        docker:
+            - image: circleci/welcome-orb@0.4.1
         steps:
+            - checkout
             - run: jupyter-nbconvert --execute ./Nearest_Neighbors_Classification.ipynb
             - store_artifacts:
                 path: ./Nearest_Neighbors_Classification.html
