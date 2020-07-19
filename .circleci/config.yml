@@ -6,9 +6,9 @@ jobs:
             - image: circleci/python:3.6.4 
         steps:
             - checkout
-            - run: sudo pip install -r requirements.txt
+            - run: sudo pip install -r titanic/requirements.txt
             - run: sudo bash titanic/dataset_download.bash
-            - run: jupyter-nbconvert --execute ./Nearest_Neighbors_Classification.ipynb
+            - run: jupyter-nbconvert --execute titanic/getting-to-know-kaggle.ipynb
             - run: sudo bash titanic/submit_result.bash
             - store_artifacts:
                 path: ./Nearest_Neighbors_Classification.html

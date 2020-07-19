@@ -1,7 +1,0 @@
-jupyter_client
-nbconvert
-numpy
-matplotlib
-sklearn
-ipykernel
-kaggle
