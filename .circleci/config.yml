@@ -7,9 +7,9 @@ jobs:
         steps:
             - checkout
             - run: sudo pip install -r requirements.txt
-            - run: ../titanic/dataset_download.bat
+            - run: /titanic/dataset_download.bat
             - run: jupyter-nbconvert --execute ./Nearest_Neighbors_Classification.ipynb
-            - run: ../titanic/submit_result.bat
+            - run: /titanic/submit_result.bat
             - store_artifacts:
                 path: ./Nearest_Neighbors_Classification.html
       
